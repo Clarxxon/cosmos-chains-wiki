@@ -24,5 +24,7 @@
     }
   ],
   "memo": ""
-}```
+}
+```
+
 :atom_symbol: `"type": "cosmos-sdk/MsgVote"`
