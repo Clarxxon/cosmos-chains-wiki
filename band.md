@@ -1,10 +1,11 @@
+## Band statesync script
 sudo systemctl stop bandd.service
 
 LATEST_HEIGHT=$(curl -s http://rpc.laozi1.bandchain.org:80/block | jq -r .result.block.header.height); \
 BLOCK_HEIGHT=$((LATEST_HEIGHT - 1000)); \
 TRUST_HASH=$(curl -s "http://rpc.laozi1.bandchain.org:80/block?height=$BLOCK_HEIGHT" | jq -r .result.block_id.hash)
 
-# check
+### check and restart bandd
 echo $LATEST_HEIGHT $BLOCK_HEIGHT $TRUST_HASH
 
 sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1true| ; \
