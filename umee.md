@@ -8,9 +8,9 @@ Description=Peggo Service
 After=network.target
 
 [Service]
-User=$USER
+User=root
 Type=simple
-ExecStart=/usr/local/bin/peggo orchestrator $BRIDGE_ADDR \
+ExecStart=/root/go/bin/peggo orchestrator $BRIDGE_ADDR \
   --bridge-start-height=\"$START_HEIGHT\" \
   --eth-rpc=\"$ETH_RPC\" \
   --relay-batches=true \
