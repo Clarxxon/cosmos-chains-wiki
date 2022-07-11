@@ -3,7 +3,7 @@
 peggo service 
 
 ```
-$ echo "[Unit]
+echo "[Unit]
 Description=Peggo Service
 After=network.target
 
@@ -29,5 +29,5 @@ LimitNOFILE=65535
 
 [Install]
 WantedBy=multi-user.target" > $HOME/peggod.service
-$ sudo mv $HOME/peggod.service /etc/systemd/system
+sudo mv $HOME/peggod.service /etc/systemd/system
 ```
